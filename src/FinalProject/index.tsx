@@ -12,7 +12,7 @@ export default function FinalProject() {
     return (
         <Router>
             <div>
-                <h1>CS5230 Final Project</h1>
+                <h1>DS5230 Final Project</h1>
                 <nav>
                     {/* Navigation Links */}
                     <Link to="/"> PCA Components</Link> | 
