@@ -40,7 +40,7 @@ const VarianceChart: React.FC = () => {
         type: "bar" as const, // 明确声明为柱状图
         label: "Explained Variance Ratio",
         data: explainedVarianceRatio,
-        backgroundColor: "rgba(75, 192, 192, 0.5)", // 柱状图颜色
+        backgroundColor: labels.map(label => (label === "PC6" ? "rgba(255, 0, 0, 0.5)" : "rgba(75, 192, 192, 0.5)")), // Dynamically set color
       },
       {
         type: "line" as const, // 明确声明为折线图
