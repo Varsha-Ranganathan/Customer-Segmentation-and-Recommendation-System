@@ -27,6 +27,21 @@ const EvaluationMetrics: React.FC = () => {
     { clusters: 10, silhouette: 0.472363, logLikelihood: -40184.615545, chIndices: 6273.175785, bic: 80863.691561, daviesBouldin: 0.731595 },
   ];
 
+
+  const generatePointColors = (clusters: number[]) => {
+    return clusters.map((cluster) =>
+      cluster === 5
+        ? "rgba(54, 162, 235, 1)"
+        : "rgba(255, 0, 0, 1)" // Highlight cluster 5 in red
+        //: "rgba(54, 162, 235, 1)" // Default color (blue)
+    );
+  };
+
+  // Generate custom point sizes
+  const generatePointSizes = (clusters: number[]) =>
+    clusters.map((cluster) => (cluster === 5 ? 5 : 3)); // Larger size for cluster 5
+
+
   // Generate chart data for a specific metric
   const generateChartData = (metric: string) => ({
     labels: dataAfter.map((row) => row.clusters),
@@ -37,6 +52,9 @@ const EvaluationMetrics: React.FC = () => {
         borderColor: "rgba(255, 99, 132, 1)",
         backgroundColor: "rgba(255, 99, 132, 0.2)",
         borderWidth: 2,
+        pointBackgroundColor: generatePointColors(dataAfter.map((row) => row.clusters)), // Custom point colors
+        pointBorderColor: generatePointColors(dataAfter.map((row) => row.clusters)), // Custom point border colors
+        pointRadius: generatePointSizes(dataAfter.map((row) => row.clusters)), // Dynamic point sizes
         fill: false,
       },
     ],
@@ -53,12 +71,12 @@ const EvaluationMetrics: React.FC = () => {
           <Line data={generateChartData("silhouette")} options={{ maintainAspectRatio: true }} />
         </div>
         <div>
-          <h3>Log-likelihood</h3>
-          <Line data={generateChartData("logLikelihood")} options={{ maintainAspectRatio: true }} />
-        </div>
-        <div>
           <h3>CH Indices</h3>
           <Line data={generateChartData("chIndices")} options={{ maintainAspectRatio: true }} />
+        </div>
+        <div>
+          <h3>Log-likelihood</h3>
+          <Line data={generateChartData("logLikelihood")} options={{ maintainAspectRatio: true }} />
         </div>
         <div>
           <h3>BIC</h3>
