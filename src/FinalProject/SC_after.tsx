@@ -74,7 +74,7 @@ const SC_After: React.FC = () => {
         </div>
         {/* Insert PNG Image */}
         <div style={{ marginBottom: "20px" }}>
-            <img src="/After.png" alt="Example Visualization" style={{ width: "160%", maxHeight: "800px", objectFit: "contain" }} />
+            <img src="/public/After.png" alt="Example Visualization" style={{ width: "160%", maxHeight: "800px", objectFit: "contain" }} />
         </div>
         {/*<div>
           <h3>Log-likelihood</h3>

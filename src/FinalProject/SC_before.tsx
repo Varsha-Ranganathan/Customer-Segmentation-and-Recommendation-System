@@ -74,7 +74,7 @@ const SC_Before: React.FC = () => {
         </div>
         {/* Insert PNG Image */}
         <div style={{ marginBottom: "20px" }}>
-            <img src="/Before.png" alt="Example Visualization" style={{ width: "180%", maxHeight: "800px", objectFit: "contain" }} />
+            <img src="/public/Before.png" alt="Example Visualization" style={{ width: "180%", maxHeight: "800px", objectFit: "contain" }} />
         </div>
         {/*<div>
           <h3>Log-likelihood</h3>
