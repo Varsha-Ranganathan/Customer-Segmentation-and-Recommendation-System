@@ -64,7 +64,7 @@ const SC_After: React.FC = () => {
 
   return (
     <div>
-      <h1>Silhouette Score (Before and After T-SNE)</h1>
+      <h1>GMM Silhouette Score (Before and After T-SNE)</h1>
 
       {/* Line Charts for each metric */}
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 600px))", gap: "20px", marginTop: "20px" }}>

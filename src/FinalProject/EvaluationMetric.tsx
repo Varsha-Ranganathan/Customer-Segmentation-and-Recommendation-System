@@ -44,7 +44,7 @@ const EvaluationMetrics: React.FC = () => {
 
   return (
     <div>
-      <h1>Evaluation Metrics (Find optimal clusters)</h1>
+      <h1>Evaluation Metrics (Find optimal clusters=5)</h1>
 
       {/* Line Charts for each metric */}
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 600px))", gap: "20px", marginTop: "20px" }}>
