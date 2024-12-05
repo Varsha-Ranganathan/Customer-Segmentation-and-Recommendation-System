@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import VarianceChart from "./VarianceChart";
-import SC_Before from "./SC_before";
-import SC_After from "./SC_after";
+import SC_Before from "./SC_Before";
+import SC_After from "./SC_After";
 import EvaluationMetrics from "./EvaluationMetric";
-import K_mean from "./K_means";
+import K_mean from "./K_mean";
 import Three_d from "./Three_d";
 import T_SNE from "./T_SNE";
 
