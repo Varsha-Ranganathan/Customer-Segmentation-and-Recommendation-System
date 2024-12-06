@@ -13,6 +13,10 @@ export default function K_mean() {
         <div style={{  marginBottom: "20px" }}>
             <img src="/K-3.png" alt="Example Visualization" style={{ width: "105%", maxHeight: "400px", objectFit: "contain" }} />
         </div>
+
+        <div style={{  marginBottom: "20px" }}>
+            <img src="/K-image.png" alt="Example Visualization" style={{ width: "105%", maxHeight: "400px", objectFit: "contain" }} />
+        </div>
         
         </div>
     )
