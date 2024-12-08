@@ -64,13 +64,14 @@ const SC_After: React.FC = () => {
 
   return (
     <div>
-      <h1>GMM Silhouette Score (Before and After T-SNE)</h1>
+      <h1>GMM Silhouette Score (After T-SNE)</h1>
 
       {/* Line Charts for each metric */}
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 600px))", gap: "20px", marginTop: "20px" }}>
         <div>
-          <h3>Silhouette Score</h3>
+          <h3>Silhouette Score(=0.45)</h3>
           <Line data={generateChartData("silhouette")} options={{ maintainAspectRatio: true }} />
+          <img src="/b.png" alt="Example Visualization" style={{ width: "105%", maxHeight: "400px", objectFit: "contain" }} />
         </div>
         {/* Insert PNG Image */}
         <div style={{ marginBottom: "20px" }}>

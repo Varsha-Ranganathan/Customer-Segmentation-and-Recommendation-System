@@ -67,23 +67,23 @@ const EvaluationMetrics: React.FC = () => {
       {/* Line Charts for each metric */}
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 600px))", gap: "20px", marginTop: "20px" }}>
         <div>
-          <h3>Silhouette Score</h3>
+          <h3>Silhouette Score (Elbow point=5)</h3>
           <Line data={generateChartData("silhouette")} options={{ maintainAspectRatio: true }} />
         </div>
         <div>
-          <h3>CH Indices</h3>
+          <h3>CH Indices (Elbow point=5, after 5 might be overfitting)</h3>
           <Line data={generateChartData("chIndices")} options={{ maintainAspectRatio: true }} />
         </div>
         <div>
-          <h3>Log-likelihood</h3>
+          <h3>Log-likelihood (Increases until 5 clusters, with further rise suggesting overfitting)</h3>
           <Line data={generateChartData("logLikelihood")} options={{ maintainAspectRatio: true }} />
         </div>
         <div>
-          <h3>BIC</h3>
+          <h3>BIC (Sharp drop until 5 clusters, suggesting optimality. Further drop indicates overfitting)</h3>
           <Line data={generateChartData("bic")} options={{ maintainAspectRatio: true }} />
         </div>
         <div>
-          <h3>Davies Bouldin</h3>
+          <h3>Davies Bouldin (Lowest at 2 clusters (1.69) but remains favorable for 5 clusters (1.85))</h3>
           <Line data={generateChartData("daviesBouldin")} options={{ maintainAspectRatio: true }} />
         </div>
       </div>
